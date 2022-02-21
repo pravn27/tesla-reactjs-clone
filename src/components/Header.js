@@ -5,7 +5,14 @@ import CloseIcon from "@mui/icons-material/Close";
 
 const Header = () => {
   const [burgerStatus, setBurgerStatus] = useState(false);
-  const cars = ["Model S", "Model 3", "Model X", "Model Y"];
+  const cars = [
+    "Model S",
+    "Model 3",
+    "Model X",
+    "Model Y",
+    "Solar Roof",
+    "Solar Panels",
+  ];
   return (
     <Container>
       <a href="/">
@@ -34,10 +41,10 @@ const Header = () => {
           <a href="/">Used Inventory</a>
         </li>
         <li>
-          <a href="/">Trade-in</a>
+          <a href="/">Trade-In</a>
         </li>
         <li>
-          <a href="/">Cybertruck</a>
+          <a href="/">Test Drive</a>
         </li>
       </BurgerNav>
     </Container>
@@ -66,8 +73,7 @@ const Menu = styled.div`
   flex: 1;
 
   a {
-    font-weight: 600;
-    text-transform: uppercase;
+    font-weight: 500;
     padding: 0 10px;
   }
 
@@ -81,8 +87,7 @@ const RightMenu = styled.div`
   align-items: center;
 
   a {
-    font-weight: 600;
-    text-transform: uppercase;
+    font-weight: 500;
     margin-right: 10px;
   }
 `;
@@ -105,15 +110,19 @@ const BurgerNav = styled.div`
   flex-direction: column;
   text-align: start;
   transform: ${(props) => (props.show ? "translateX(0)" : "translateX(100%)")};
-  transition: transform 0.2s;
+  transition: transform 0.75s;
 
   li {
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 8px 18px;
 
     a {
-      font-weight: 600;
+      font-weight: 500;
     }
+  }
+
+  li:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 40px;
   }
 `;
 
